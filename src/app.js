@@ -1,6 +1,11 @@
 import Vue from "vue"
 import App from "./App.vue"
-let vm = new Vue({
-    el:"#app",
-    render:(h)=>h(App)
-});
+
+// 创建实例的函数
+export default ()=>{
+    let app = new Vue({
+        el:"#app",
+        render:(h)=>h(App)
+    });
+    return app;
+}
