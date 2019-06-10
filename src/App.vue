@@ -1,10 +1,19 @@
 <template>
-    
+    <div>
+        <Bal></Bal>
+        <Foo></Foo>
+    </div>
 </template>
 
 <script>
+    import Bal from "./components/Bal.vue"
+    import Foo from "./components/Foo.vue"
     export default {
-        name: "App"
+        name: "App",
+        components:{
+            Bal,
+            Foo
+        }
     }
 </script>
 
