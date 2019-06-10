@@ -60,6 +60,7 @@ typings/
 # next.js build output
 .next
 .idea/
-node_modules
-
+dist/
+/node_modules/
 srr-dome.iml
+vue-ssr-cli.iml
