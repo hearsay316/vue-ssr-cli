@@ -1,12 +1,17 @@
 <template>
-    <div>
+    <div @click="HandleClick">
         bal
     </div>
 </template>
 
 <script>
     export default {
-        name: "Bal"
+        name: "Bal",
+        methods:{
+            HandleClick(){
+                console.log(123);
+            }
+        }
     }
 </script>
 

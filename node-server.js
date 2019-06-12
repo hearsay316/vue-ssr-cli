@@ -2,6 +2,7 @@ let express = require("express");
 let app = express();
 let Vue = require("vue");
 let fs = require("fs");
+let path = require('path');
 let vueServerRenderer = require("vue-server-renderer");
 let serverBundle = fs.readFileSync('./dist/server.bundle.js','utf-8');
 let template = fs.readFileSync('./dist/index.srr.html','utf-8');
@@ -17,4 +18,5 @@ app.get("/",(req,res)=>{
     });
 
 });
+app.use(express.static(path.resolve(__dirname,'dist')));
 app.listen(4000);
