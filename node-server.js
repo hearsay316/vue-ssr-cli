@@ -11,13 +11,13 @@ let render = vueServerRenderer.createBundleRenderer(serverBundle,{
 });
 console.log(render);
 app.get("/",(req,res)=>{
+    let context = {url:req.url};
     // 把渲染的字符串传给前端浏览器,只是返回字符串,并没有vue实际功能
-    render.renderToString((err,html)=>{
+    render.renderToString(context,(err,html)=>{
         console.log(err);
         console.log();
         res.send(html);
     });
-
 });
 app.use(express.static(path.resolve(__dirname,'dist')));
 app.listen(4000);
