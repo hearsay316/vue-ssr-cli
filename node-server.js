@@ -11,6 +11,7 @@ let render = vueServerRenderer.createBundleRenderer(serverBundle,{
 });
 console.log(render);
 app.get("/",(req,res)=>{
+    // 把渲染的字符串传给前端浏览器,只是返回字符串,并没有vue实际功能
     render.renderToString((err,html)=>{
         console.log(err);
         console.log();
