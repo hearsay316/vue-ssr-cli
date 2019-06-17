@@ -9,17 +9,17 @@ export default () => {
             useranme: "jwt"
         },
         mutations: {
-            set_username(state) {
-                state.useranme = "争锋"
+            set_username(state,desc) {
+                state.useranme = desc
             }
         },
         actions: {
-            set_username({commit}) {
+            set_username({commit},desc) {
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
-                        commit("set_username");
+                        commit("set_username",desc);
                         resolve();
-                    }, 1000)
+                    }, 1000);
                 })
             }
         }
