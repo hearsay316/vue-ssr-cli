@@ -8,8 +8,8 @@
     export default {
         name: "Bal",
         // 在neut 页面才能使用
-        asynData(){ // 异步数据 全部是promise
-            return this.$store.dispatch('set_username');
+        asyncData({store}){ // 异步数据 全部是promise
+            return store.dispatch('set_username');
         },
         methods:{
             HandleClick(){

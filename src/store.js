@@ -17,7 +17,8 @@ export default () => {
             set_username({commit}) {
                 return new Promise((resolve, reject) => {
                     setTimeout(() => {
-                        commit("set_username")
+                        commit("set_username");
+                        resolve();
                     }, 1000)
                 })
             }

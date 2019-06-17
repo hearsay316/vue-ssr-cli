@@ -2,7 +2,7 @@ import Vue from "vue"
 import App from "./App.vue"
 import "./assets/css/base.css"
 import createRouter from './router.js';
-import createStore from './store'
+import createStore from './store.js'
 // 创建实例的函数
 export default ()=>{
     let router = createRouter();

@@ -1,4 +1,4 @@
-import createApp from './app'
+import createApp from './app.js'
 let {app} = createApp();
 
 app.$mount("#App");
