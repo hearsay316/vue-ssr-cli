@@ -4,7 +4,7 @@ import Vue from "vue"
 Vue.use(Vuex);
 
 export default () => {
-    return new Vuex.Store({
+    let store = new Vuex.Store({
         state: {
             useranme: "jwt"
         },
@@ -23,5 +23,9 @@ export default () => {
                 })
             }
         }
-    })
+    });
+    if(typeof window !=="undefined"&&window.__INITIAL_STATE__){
+        store.replaceState(window.__INITIAL_STATE__);
+    }
+    return store;
 }

@@ -1,6 +1,6 @@
 <template>
     <div @click="HandleClick">
-        bal
+        bal {{$store.state.useranme}}
     </div>
 </template>
 
